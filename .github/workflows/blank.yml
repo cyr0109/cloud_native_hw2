@@ -34,3 +34,11 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          
+      # 額外自訂步驟 1：列出目前資料夾檔案
+      - name: List current directory
+        run: ls -la
+
+      # 額外自訂步驟 2：顯示目前時間
+      - name: Show current time
+        run: date
