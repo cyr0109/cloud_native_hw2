@@ -42,3 +42,9 @@ jobs:
       # 額外自訂步驟 2：顯示目前時間
       - name: Show current time
         run: date
+        
+      - name: Conditionally fail on hw1-f branch
+        if: contains(github.head_ref, 'hw1-f')
+        run: |
+          echo "Failing because this is hw1-f branch"
+          exit 1
